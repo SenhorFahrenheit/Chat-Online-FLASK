@@ -1,12 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Resetando margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* Definindo a fonte principal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do chat box */
 #chat-box {
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-    overflow-y: scroll;
-    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo da mensagem */
+.message {
+    background-color: #e9f7fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Estilo de formatação do input e botões */
+input[type="text"] {
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Adiciona um pequeno rodapé */
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #666;
 }

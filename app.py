@@ -12,7 +12,8 @@ def index():
 @socketio.on("message")
 def handle_message(msg):
     print(f"Mensagem recebida: {msg}")
-    socketio.send(msg, broadcast=True)  # Envia a mensagem para todos os clientes
+    # Usando socketio.emit() para emitir para todos os clientes
+    socketio.emit("message", msg)  # Correção aqui: broadcast é implicito em socketio.emit
 
 if __name__ == "__main__":
     socketio.run(app, debug=True, host="0.0.0.0", port=5000)
